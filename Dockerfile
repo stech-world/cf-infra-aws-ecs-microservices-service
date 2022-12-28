@@ -1,7 +1,6 @@
 FROM node:18-alpine
 
 EXPOSE 80
-ENV ENV=production
 
 WORKDIR /app
 COPY package*.json ./
