@@ -18,7 +18,7 @@ app.get(`/${serviceName}/cities`, async (req, res) => {
         v: 5,
         topic: 'cities',
         form: serviceName,
-        // dueResponse: JSON.stringify(response.data),
+        // unoResponse: JSON.stringify(response.data),
     });
 });
 
@@ -30,7 +30,7 @@ app.get(`/${serviceName}/books`, async (req, res) => {
         v: 5,
         topic: 'books',
         form: serviceName,
-        // dueResponse: JSON.stringify(response.data),
+        // unoResponse: JSON.stringify(response.data),
     });
 });
 
