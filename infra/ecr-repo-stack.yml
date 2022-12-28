@@ -1,0 +1,15 @@
+AWSTemplateFormatVersion: '2010-09-09'
+
+Description: ECR Repositiories
+
+Parameters:
+  ServiceName:
+    Type: String
+
+Resources:
+
+  UnoRepo:
+    Type: AWS::ECR::Repository
+    Properties: 
+      RepositoryName: !Sub stw-aws-ecs-microservices-${ServiceName}-service
+
