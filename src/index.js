@@ -11,7 +11,7 @@ app.get('/', async (req, res) => {
 });
 
 app.get(`/${serviceName}/cities`, async (req, res) => {
-    // const response = await axios.get('http://' + loadBalancerUrl + '/due/cities')
+    // const response = await axios.get('http://' + loadBalancerUrl + '/uno/cities')
     // console.log('log:', response)
     return res.send({
         error: false,
@@ -23,7 +23,7 @@ app.get(`/${serviceName}/cities`, async (req, res) => {
 });
 
 app.get(`/${serviceName}/books`, async (req, res) => {
-    // const response = await axios.get('http://' + loadBalancerUrl + '/due/books')
+    // const response = await axios.get('http://' + loadBalancerUrl + '/uno/books')
     // console.log('log:', response)
     return res.send({
         error: false,
@@ -40,11 +40,3 @@ app.get('/stat', async (req, res) => {
 
 
 const server = app.listen(process.env.PORT || 4567);
-
-if (process.env.NODE_ENV === 'production') {
-    process.on('SIGINT', () => {
-        server.close(() => {
-            process.exit(0);
-        });
-    });
-}
